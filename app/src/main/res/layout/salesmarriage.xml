@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#3b5998"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:titleTextColor="@color/cardview_light_background" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvreqno"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:textColor="#000080"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/status2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="Appointment Status:"
+                android:textColor="#000080"
+                android:textIsSelectable="true"
+                android:textSize="17sp" />
+
+            <CheckBox
+
+                android:id="@+id/wrkcomp"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_below="@+id/etPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.13"
+                android:text="Door Step Visit Done" />
+
+            <CheckBox
+
+                android:id="@+id/wrkcomp1"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_below="@+id/etPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.13"
+                android:text="Visit Not Done" />
+
+            <TextView
+                android:id="@+id/txt11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Select the Reason:"
+                android:visibility="gone"
+                android:textColor="#000080"
+                android:textIsSelectable="true"
+                android:textSize="15sp"/>
+
+            <RadioGroup
+                android:id="@+id/radiogr1"
+                android:layout_width="327dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+               >
+            <RadioButton
+                android:id="@+id/radioButton3"
+                android:layout_width="327dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000080"
+                android:layout_height="wrap_content"
+                android:text="Customer Not Available" />
+
+            <RadioButton
+                android:id="@+id/radioButton7"
+                android:layout_width="327dp"
+                android:textColor="#000080"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Transport Issues" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                android:layout_width="327dp"
+                android:textColor="#000080"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Others" />
+
+            </RadioGroup>
+            <TextView
+
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radiogr1"
+                android:text="Reason:"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000080"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/text3"
+                android:visibility="gone" />
+
+            <CheckBox
+
+                android:id="@+id/wrkcomp2"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_below="@+id/etPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.13"
+                android:text="No Show" />
+            <TextView
+
+                android:id="@+id/text5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wrkcomp2"
+                android:text="Reason:"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000080"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/edit5"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/text5"
+                android:visibility="gone" />
+            <CheckBox
+
+                android:id="@+id/wrkcomp3"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:text="Cancelled By Customer" />
+
+
+
+            <CheckBox
+
+                android:id="@+id/wrkcomp5"
+                android:layout_width="327dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etPassword"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.13"
+                android:text="Technical Issue" />
+
+            <TextView
+                android:id="@+id/txt12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginRight="10dp"
+                android:text="Select the Reason:"
+                android:textColor="#000080"
+                android:textIsSelectable="true"
+                android:textSize="15sp" />
+            <RadioGroup
+                android:id="@+id/radiogr2"
+                android:layout_width="327dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+               >
+            <RadioButton
+                android:id="@+id/radioButton9"
+                android:layout_width="327dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000080"
+                android:layout_height="wrap_content"
+                android:text="One platform Down" />
+
+            <RadioButton
+                android:id="@+id/radioButton10"
+                android:layout_width="327dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:text="IGR Down" />
+
+            <RadioButton
+                android:id="@+id/radioButton11"
+                android:layout_width="327dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content"
+                android:text="Faulty Laptop" />
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                android:layout_marginLeft="20dp"
+                android:textColor="#000080"
+                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Others" />
+
+            </RadioGroup>
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radiogr2"
+                android:text="Reason:"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="#000080"
+                android:visibility="gone" />
+            <EditText
+                android:id="@+id/edit4"
+                android:layout_width="290dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/text4"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/status1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="Biometric Status:"
+                android:textColor="#000080"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                android:visibility="gone"
+                 />
+
+
+            <TextView
+                android:id="@+id/tvownerbio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:text="Husband biometric completed: "
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                />
+
+            <Spinner
+                android:id="@+id/spinnerO"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:prompt="@string/spinner_title"
+
+                />
+
+            <TextView
+                android:id="@+id/tvtenantbio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:visibility="gone"
+                android:text="Wife biometric completed: "
+                android:textColor="#545454"
+                android:textIsSelectable="true"
+                android:textSize="17sp"
+                 />
+
+            <Spinner
+                android:id="@+id/spinnerT"
+                style="@style/spinner_style"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:visibility="gone"
+                android:gravity="center"
+                android:prompt="@string/spinner_title"
+
+                 />
+
+
+            <Button
+                android:id="@+id/btnupdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btnselector"
+                android:text="Update Status"
+                android:textColor="@android:color/white"/>
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+
+
+
+    </ScrollView>
+</LinearLayout>
